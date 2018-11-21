@@ -4,6 +4,10 @@ We have completed the following parts of our project:
 * Train a nearest neighbour model including 1000 instances (the trained model is "train_features.npy").
 * Test our model by comparing the estimated layout and real layout.
 real layout:
+
 ![alt text](https://github.com/allhailjustice/vis_class_project/blob/master/real_layout.png)
+
 estimated layout:
+
 ![alt text](https://github.com/allhailjustice/vis_class_project/blob/master/estimated_layout.png)
+
