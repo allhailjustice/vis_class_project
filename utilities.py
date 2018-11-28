@@ -8,7 +8,7 @@ from knn import knn
 #           output is the nearest neighbour's idx
 # function draw: input are (nd-array(matrix),str(figure name))
 
-def draw_layout(axes, test_matrix):
+def training(test_matrix):
     features = []
     for i in range(1000):
         # create a matrix
@@ -22,5 +22,8 @@ def draw_layout(axes, test_matrix):
 
     # train knn model
     idx = knn(features, RW(test_matrix))
+    return idx
+
+def draw_layout(axes, idx):
     # draw
     draw(np.load('matrices/synthetic'+str(idx)+'.npy'), 'estimated_layout', axes)

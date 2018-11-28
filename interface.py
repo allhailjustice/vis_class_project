@@ -5,11 +5,12 @@ from PyQt5.QtCore import pyqtSlot
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
 import matplotlib.pyplot as plt
-from utilities import draw_layout
+from utilities import draw_layout, training
 from layout import draw
 import sip
 
 test_matrix = []
+idx = 0
 
 class App(QMainWindow):
     
@@ -25,6 +26,8 @@ class App(QMainWindow):
     def initUI(self):
         global test_matrix
         test_matrix = create_matrix(100, 100)
+        global idx
+        idx = training(test_matrix)
         
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
@@ -72,7 +75,7 @@ class PlotCanvas(FigureCanvas):
     def update_figure(self):
         if(self.id==1):
            self.axes.set_title('estimated_layout')
-           draw_layout(self.axes, test_matrix)
+           draw_layout(self.axes, idx)
         else:
            self.axes.set_title('real_layout')
            draw(test_matrix, 'real_layout', self.axes)
