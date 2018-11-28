@@ -27,5 +27,5 @@ test_matrix = create_matrix(100, 100)
 idx = knn(features, RW(test_matrix))
 
 # show and save the real and estimated layouts
-draw(np.load('matrices/synthetic'+str(idx)+'.npy'), 'estimated_layout')
-draw(test_matrix, 'real_layout')
+draw(np.load('matrices/synthetic'+str(idx)+'.npy'), 'estimated_layout', None)
+draw(test_matrix, 'real_layout', None)
