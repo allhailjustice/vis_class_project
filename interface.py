@@ -1,16 +1,11 @@
 import sys
 from graphlet import *
 from PyQt5.QtWidgets import *
+from PyQt5.QtGui import QIcon, QPixmap
 from PyQt5.QtCore import pyqtSlot
 from matplotlib.backends.backend_qt5agg import FigureCanvasQTAgg as FigureCanvas
 from matplotlib.figure import Figure
-import matplotlib.pyplot as plt
-from utilities import draw_layout, training
-from layout import draw
-import sip
-
-test_matrix = []
-idx = 0
+from utilities import test, training, clear
 
 class App(QMainWindow):
     
@@ -19,66 +14,85 @@ class App(QMainWindow):
         self.left = 10
         self.top = 10
         self.title = 'Final Project'
-        self.width = 1140
-        self.height = 500
+        self.width = 1400
+        self.height = 550
         self.initUI()
     
     def initUI(self):
-        global test_matrix
-        test_matrix = create_matrix(100, 100)
-        global idx
-        idx = training(test_matrix)
         
         self.setWindowTitle(self.title)
         self.setGeometry(self.left, self.top, self.width, self.height)
         
-        self.m1 = PlotCanvas(self, width=5, height=5, id=1)
-        self.m1.move(0,0)
+        button1 = QPushButton('Training', self)
+        button1.move(0,0)
+        button1.resize(140,100)
+        button1.clicked.connect(self.prepare)
         
-        button = QPushButton('Rerun', self)
-        button.move(500,0)
-        button.resize(140,100)
-        button.clicked.connect(self.click_on)
+        button2 = QPushButton('Test', self)
+        button2.move(0,110)
+        button2.resize(140,100)
+        button2.clicked.connect(self.test)
         
-        self.m2 = PlotCanvas(self, width=5, height=5, id=2)
-        self.m2.move(640,0)
+        button3 = QPushButton('Clear', self)
+        button3.move(0,220)
+        button3.resize(140,100)
+        button3.clicked.connect(self.clear)
+        
+        
+        title1 = QLabel(self)
+        title1.setText('estimated_layout')
+        title1.adjustSize()
+        title1.move(400,10)
+        
+        self.m1 = QLabel(self)
+        self.m1.setPixmap(QPixmap(''))
+        self.m1.adjustSize()
+        self.m1.move(140,50)
+        
+        title2 = QLabel(self)
+        title2.setText('real_layout')
+        title2.adjustSize()
+        title2.move(1100,10)
+        
+        self.m2 = QLabel(self)
+        self.m2.setPixmap(QPixmap(''))
+        self.m2.adjustSize()
+        self.m2.move(760,50)
         
         self.show()
-
-    def click_on(self):
+    
+    @pyqtSlot()
+    def prepare(self):
+        training()
+    
+    @pyqtSlot()
+    def test(self):
         self.m1.hide()
         self.m2.hide()
-        global test_matrix
-        test_matrix = create_matrix(100, 100)
-        m3 = PlotCanvas(self, width=5, height=5, id=1)
-        m3.move(0,0)
-        m4 = PlotCanvas(self, width=5, height=5, id=2)
-        m4.move(640,0)
+        test()
+        m3 = QLabel(self)
+        m3.setPixmap(QPixmap('estimated_layout.png'))
+        m3.adjustSize()
+        m3.move(140,50)
+        m4 = QLabel(self)
+        m4.setPixmap(QPixmap('real_layout.png'))
+        m4.adjustSize()
+        m4.move(760,50)
         self.m1 = m3
         self.m2 = m4
         self.m1.show()
         self.m2.show()
 
-class PlotCanvas(FigureCanvas):
-    
-    def __init__(self, parent=None, width=5, height=5, dpi=100, id=1):
-        self.id = id
-        fig = Figure(figsize=(width, height), dpi=dpi)
-        self.axes = fig.add_subplot(111)
-        FigureCanvas.__init__(self, fig)
-        self.setParent(parent)
-        
-        FigureCanvas.setSizePolicy(self, QSizePolicy.Expanding, QSizePolicy.Expanding)
-        FigureCanvas.updateGeometry(self)
-        self.update_figure()
-    
-    def update_figure(self):
-        if(self.id==1):
-           self.axes.set_title('estimated_layout')
-           draw_layout(self.axes, idx)
-        else:
-           self.axes.set_title('real_layout')
-           draw(test_matrix, 'real_layout', self.axes)
+    @pyqtSlot()
+    def clear(self):
+        self.m1.hide()
+        self.m2.hide()
+        clear()
+        self.m1.setPixmap(QPixmap('estimated_layout.png'))
+        self.m2.setPixmap(QPixmap('real_layout.png'))
+        self.m1.show()
+        self.m2.show()
+        QApplication.processEvents()
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
