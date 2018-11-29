@@ -3,6 +3,7 @@ from layout import draw
 from knn import knn
 import numpy as np
 import os, sys
+import matplotlib.pyplot as plt
 
 # func create_matrix: input are (int(number of vertices),int(number of edges)), output is nd-array(matrix)
 # func RW: input is nd-array(matrix), output is 1d-array(graphlet frequency)
@@ -32,9 +33,13 @@ def test():
     # train knn model
     idx = knn(features, RW(test_matrix))
 
+    fig = plt.figure()
+    ax = fig.add_subplot(1,1,1)
+    ax.set_title("fruchterman_reingold")
+
     # draw
-    draw(np.load('matrices/synthetic'+str(idx)+'.npy'), 'estimated_layout', False, None)
-    draw(test_matrix, 'real_layout', True, None)
+    draw(np.load('matrices/synthetic'+str(idx)+'.npy'), 'estimated_layout', False, ax)
+    draw(test_matrix, 'real_layout', True, ax)
 
 def clear():
     array = np.ones((100,100))*0

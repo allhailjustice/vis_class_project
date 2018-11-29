@@ -24,25 +24,29 @@ class App(QMainWindow):
         self.setGeometry(self.left, self.top, self.width, self.height)
         
         button1 = QPushButton('Training', self)
+        button1.setStyleSheet("font: 20pt Comic Sans MS")
         button1.move(0,0)
         button1.resize(140,100)
         button1.clicked.connect(self.prepare)
         
         button2 = QPushButton('Test', self)
+        button2.setStyleSheet("font: 20pt Comic Sans MS")
         button2.move(0,110)
         button2.resize(140,100)
         button2.clicked.connect(self.test)
         
         button3 = QPushButton('Clear', self)
+        button3.setStyleSheet("font: 20pt Comic Sans MS")
         button3.move(0,220)
         button3.resize(140,100)
         button3.clicked.connect(self.clear)
         
         
         title1 = QLabel(self)
-        title1.setText('estimated_layout')
+        title1.setText('estimated layout')
+        title1.setStyleSheet("font: 20pt Comic Sans MS")
         title1.adjustSize()
-        title1.move(400,10)
+        title1.move(400,15)
         
         self.m1 = QLabel(self)
         self.m1.setPixmap(QPixmap(''))
@@ -50,9 +54,10 @@ class App(QMainWindow):
         self.m1.move(140,50)
         
         title2 = QLabel(self)
-        title2.setText('real_layout')
+        title2.setText('real layout')
+        title2.setStyleSheet("font: 20pt Comic Sans MS")
         title2.adjustSize()
-        title2.move(1100,10)
+        title2.move(1100,15)
         
         self.m2 = QLabel(self)
         self.m2.setPixmap(QPixmap(''))
