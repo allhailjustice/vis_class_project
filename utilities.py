@@ -1,5 +1,7 @@
 from graphlet import *
 from layout import draw
+from layout2 import draw2
+from layout3 import draw3
 from knn import knn
 import numpy as np
 import os, sys
@@ -40,6 +42,22 @@ def test():
     # draw
     draw(np.load('matrices/synthetic'+str(idx)+'.npy'), 'estimated_layout', False, ax)
     draw(test_matrix, 'real_layout', True, ax)
+
+    fig = plt.figure()
+    ax = fig.add_subplot(1,1,1)
+    ax.set_title("Kamada-Kawai")
+    
+    # draw
+    draw2(np.load('matrices/synthetic'+str(idx)+'.npy'), 'estimated_layout2', False, ax)
+    draw2(test_matrix, 'real_layout2', True, ax)
+
+    fig = plt.figure()
+    ax = fig.add_subplot(1,1,1)
+    ax.set_title("Spectral method with Laplacian matrix")
+    
+    # draw
+    draw3(np.load('matrices/synthetic'+str(idx)+'.npy'), 'estimated_layout3', False, ax)
+    draw3(test_matrix, 'real_layout3', True, ax)
 
 def clear():
     array = np.ones((100,100))*0
