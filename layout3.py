@@ -14,7 +14,7 @@ def draw3(matrix, name, close, axes):
         nx.draw(G, with_labels=False, node_size=50, node_color="skyblue", ax=axes, pos=nx.spectral_layout(G))
     else:
         nx.draw(G, with_labels=False, node_size=50, node_color="skyblue", ax=axes, pos=nx.spectral_layout(G))
-    plt.title("Spectral method with Laplacian matrix")
+    plt.title("Spectral method")
     plt.savefig(name)
     if(close):
         plt.close()

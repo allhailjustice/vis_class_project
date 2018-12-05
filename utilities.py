@@ -53,7 +53,7 @@ def test():
 
     fig = plt.figure()
     ax = fig.add_subplot(1,1,1)
-    ax.set_title("Spectral method with Laplacian matrix")
+    ax.set_title("Spectral method")
     
     # draw
     draw3(np.load('matrices/synthetic'+str(idx)+'.npy'), 'estimated_layout3', False, ax)
