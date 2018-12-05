@@ -139,11 +139,23 @@ class App(QMainWindow):
     def clear(self):
         self.m1.hide()
         self.m2.hide()
+        self.m3.hide()
+        self.m4.hide()
+        self.m5.hide()
+        self.m6.hide()
         clear()
         self.m1.setPixmap(QPixmap('estimated_layout.png'))
         self.m2.setPixmap(QPixmap('real_layout.png'))
+        self.m3.setPixmap(QPixmap('estimated_layout.png'))
+        self.m4.setPixmap(QPixmap('real_layout.png'))
+        self.m5.setPixmap(QPixmap('estimated_layout.png'))
+        self.m6.setPixmap(QPixmap('real_layout.png'))
         self.m1.show()
         self.m2.show()
+        self.m3.show()
+        self.m4.show()
+        self.m5.show()
+        self.m6.show()
         QApplication.processEvents()
 
 if __name__ == '__main__':
