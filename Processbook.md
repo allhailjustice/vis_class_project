@@ -44,6 +44,7 @@ The interface has three buttons:
 and two rows of plots(three plots of each):
 * Estimated layout: the nearest graph's layouts from dataset selected by our graphlet kernel without computing its actual layout.
 * Real layout: actual layouts computed using three layout methods.
+So users can compare estimated layout with real layout multiple times in three kinds of layout methods.
 
 ## Visualization Technique
 What were the difficulties in implementing the paper? What did you have to learn, above and beyond the paper, in order to implement it?
