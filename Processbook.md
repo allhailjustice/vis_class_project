@@ -19,8 +19,10 @@ Please refer to interface.py for usage
 * real data: https://github.com/shiruipan/graph_datasets.
 
 ## Questions
+What questions are you trying to answer? How did these questions evolve over the course of the project? What new questions did you consider in the course of your analysis?
 
 ## Data
+Source, scraping method, cleanup, etc.
 
 ## Implementation
 
@@ -29,7 +31,10 @@ Please refer to interface.py for usage
 ### part 2: interface
 
 ## Visualization Technique
+What were the difficulties in implementing the paper? What did you have to learn, above and beyond the paper, in order to implement it?
 
 ## Evaluation
+What did you choose to evaluate the technique? Did you follow the experimental setup as described by the paper, or did you pursue a different form of evaluation?
 
 ## Analysis
+What did you learn about the technique by applying it to the different datasets? How can you characterize the technique’s strengths and weaknesses in terms of the data?
