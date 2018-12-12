@@ -41,7 +41,7 @@ The interface has three buttons:
 * Test: It is used to test the model with an input graph and show both the estimated layouts and real layouts in three layout methods. When first run the interface, you don't need to train the data cause we've already trained it, so users can just click test to see layouts.
 * Clear: It is used to clear the plots.
 
-and two rows of plots:
+and two rows of plots(three plots of each):
 * Estimated layout: the nearest graph's layouts from dataset selected by our graphlet kernel without computing its actual layout.
 * Real layout: actual layouts computed using three layout methods.
 
