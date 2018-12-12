@@ -1,4 +1,4 @@
-# ProcessBook
+# Processbook
 
 Main files in this folder.
 * graphlet.py: calculate graphlet frequency by random walk
@@ -42,8 +42,8 @@ The interface has three buttons:
 * Clear: It is used to clear the plots.
 
 and two rows of plots:
-* Estimated layout:
-* Real layout:
+* Estimated layout: the nearest graph's layouts from dataset selected by our graphlet kernel without computing its actual layout.
+* Real layout: actual layouts computed using three layout methods.
 
 ## Visualization Technique
 What were the difficulties in implementing the paper? What did you have to learn, above and beyond the paper, in order to implement it?
