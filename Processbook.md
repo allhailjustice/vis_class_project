@@ -32,9 +32,10 @@ Source, scraping method, cleanup, etc.
 Start the interface:
 ![Image text](https://github.com/allhailjustice/vis_class_project/blob/master/screenshots/Screen%20Shot%202018-12-11%20at%209.00.44%20PM.png)
 The interface has three buttons:
-* Training:
-* Test:
+* Training: It is used to re-training the dataset, it will generate ~10k connected graphs, calculate and save graphlet frequency.
+* Test: It is used to test the model with an input graph.
 * Clear:
+
 and two rows of plots:
 * Estimated layout:
 * Real layout:
