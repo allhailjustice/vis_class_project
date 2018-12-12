@@ -29,6 +29,7 @@ Source, scraping method, cleanup, etc.
 ### part 1: graphlet kernel
 
 ### part 2: interface
+![Image text](https://github.com/allhailjustice/vis_class_project/blob/master/screenshots/Screen%20Shot%202018-12-11%20at%209.00.44%20PM.png)
 
 ## Visualization Technique
 What were the difficulties in implementing the paper? What did you have to learn, above and beyond the paper, in order to implement it?
