@@ -16,7 +16,11 @@ Please refer to interface.py for usage
 
 ## Related Work
 * transactions on visualization and computer graphics, 24(1), 478-488. Kwon, O. H., Crnovrsanin, T., & Ma, K. L. (2018). What Would a Graph Look Like in This Layout? A Machine Learning Approach to Large Graph Visualization. IEEE
-* real data: https://github.com/shiruipan/graph_datasets.
+* Xiaowei Chen, Yongkun Li, Pinghui Wang, and John Lui. A general framework for estimating graphlet statistics via random walk. Proceedings of the VLDB Endowment, 10(3):253–264, 2016.
+* Timothy A Davis and Yifan Hu. The university of florida sparse matrix collec- tion. ACM Transactions on Mathematical Software (TOMS), 38(1):1, 2011.
+* Peter Eades, Seok-Hee Hong, Karsten Klein, and An Nguyen. Shape-based quality metrics for large graph visualization. In International Symposium on Graph Drawing and Network Visualization, pages 502–514. Springer, 2015.
+* Stefan Hachul and Michael Jünger. Large-graph layout algorithms at work: An experimental study. J. Graph Algorithms Appl., 11(2):345–369, 2007.
+* https://github.com/shiruipan/graph_datasets.
 
 ## Questions
 What questions are you trying to answer? How did these questions evolve over the course of the project? What new questions did you consider in the course of your analysis?
