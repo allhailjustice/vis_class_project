@@ -1,6 +1,6 @@
 # ProcessBook
 
-Up to now, we have 4 .py files in this folder.
+Main files in this folder.
 * graphlet.py: calculate graphlet frequency by random walk
 * layout.py: draw the layout
 * knn.py: train a nearest neighbour model
@@ -29,19 +29,21 @@ Source, scraping method, cleanup, etc.
 ### part 1: graphlet kernel
 
 ### part 2: interface
+
 Start the interface:
 ![Image text](https://github.com/allhailjustice/vis_class_project/blob/master/screenshots/Screen%20Shot%202018-12-11%20at%209.00.44%20PM.png)
+
+Run a test:
+![Image text](https://github.com/allhailjustice/vis_class_project/blob/master/screenshots/Screen%20Shot%202018-12-11%20at%209.01.24%20PM.png)
+
 The interface has three buttons:
 * Training: It is used to re-training the dataset, it will generate ~10k connected graphs, calculate and save graphlet frequency.
-* Test: It is used to test the model with an input graph.
-* Clear:
+* Test: It is used to test the model with an input graph and show both the estimated layouts and real layouts in three layout methods. When first run the interface, you don't need to train the data cause we've already trained it, so users can just click test to see layouts.
+* Clear: It is used to clear the plots.
 
 and two rows of plots:
 * Estimated layout:
 * Real layout:
-
-Run a test:
-![Image text](https://github.com/allhailjustice/vis_class_project/blob/master/screenshots/Screen%20Shot%202018-12-11%20at%209.01.24%20PM.png)
 
 ## Visualization Technique
 What were the difficulties in implementing the paper? What did you have to learn, above and beyond the paper, in order to implement it?
