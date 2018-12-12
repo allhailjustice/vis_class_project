@@ -27,6 +27,7 @@ Source, scraping method, cleanup, etc.
 ## Implementation
 
 ### part 1: graphlet kernel
+Describe the intent and functionality of the visualizations you implemented. 
 
 ### part 2: interface
 
