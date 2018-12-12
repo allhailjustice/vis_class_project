@@ -1,3 +1,5 @@
+# ProcessBook
+
 Up to now, we have 4 .py files in this folder.
 * graphlet.py: calculate graphlet frequency by random walk
 * layout.py: draw the layout
@@ -5,4 +7,20 @@ Up to now, we have 4 .py files in this folder.
 * test.py: Show how to use the files above
 * interface.py: Show a interface for user interaction
 
-Please refer to interface.py for a example
+Please refer to interface.py for usage
+
+## Overview and Motivation
+
+## Related Work
+
+## Questions
+
+## Data
+
+## Implementation
+
+## Visualization Technique
+
+## Evaluation
+
+## Analysis
