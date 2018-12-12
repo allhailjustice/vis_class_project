@@ -31,6 +31,13 @@ Source, scraping method, cleanup, etc.
 ### part 2: interface
 Start the interface:
 ![Image text](https://github.com/allhailjustice/vis_class_project/blob/master/screenshots/Screen%20Shot%202018-12-11%20at%209.00.44%20PM.png)
+The interface has three buttons:
+* Training:
+* Test:
+* Clear:
+and two rows of plots:
+* Estimated layout:
+* Real layout:
 
 Run a test:
 ![Image text](https://github.com/allhailjustice/vis_class_project/blob/master/screenshots/Screen%20Shot%202018-12-11%20at%209.01.24%20PM.png)
