@@ -1,7 +1,5 @@
 from graphlet import *
-from layout import draw
-from layout2 import draw2
-from layout3 import draw3
+from layout import *
 from knn import knn
 import numpy as np
 import os, sys
