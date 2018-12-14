@@ -17,8 +17,6 @@ Please refer to interface.py for usage
 * Oh-Hyun Kwon, Tarik Crnovrsanin, and Kwan-Liu Ma. What would a graph look like in this layout? a machine learning approach to large graph visualization. IEEE transactions on visualization and computer graphics, 24(1):478– 488, 2018. 
 * Xiaowei Chen, Yongkun Li, Pinghui Wang, and John Lui. A general framework for estimating graphlet statistics via random walk. Proceedings of the VLDB Endowment, 10(3):253–264, 2016.
 * Timothy A Davis and Yifan Hu. The university of florida sparse matrix collec- tion. ACM Transactions on Mathematical Software (TOMS), 38(1):1, 2011.
-* Peter Eades, Seok-Hee Hong, Karsten Klein, and An Nguyen. Shape-based quality metrics for large graph visualization. In International Symposium on Graph Drawing and Network Visualization, pages 502–514. Springer, 2015.
-* Stefan Hachul and Michael Jünger. Large-graph layout algorithms at work: An experimental study. J. Graph Algorithms Appl., 11(2):345–369, 2007.
 
 ## Questions
 In appearance, what we did is to predict the layout without computing it. However, the core question hiding behind is can we represent a layout by its corresponding topological features in the data. It can be further develop to another question which is can we depress the layout in its topological representation without lossing much information. Although our work is still in the appearance, it gives rise to some interesting thoughts for future researches.
