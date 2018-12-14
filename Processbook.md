@@ -27,10 +27,9 @@ We have two data sources. One is randomly generated synthetic dataset. The other
 ## Implementation
 
 ### part 1: graphlet kernel
-Describe the intent and functionality of the visualizations you implemented. 
 ![Image text](https://github.com/allhailjustice/vis_class_project/blob/master/graphlet.PNG)
 
-Graphlets are selected small, induced, and non-isomorphic subgraph patterns in graph. 3-node, 4-node, 5-node graphlets are shown in the figure above. We use random walk sampling technique to compute 5-node graphlet frequency in our project. For details, please refer to [Implementation](https://github.com/allhailjustice/vis_class_project/blob/master/graphlet.py) and [Algorithm](https://arxiv.org/pdf/1603.07504.pdf).
+Graphlets are selected small, induced, and non-isomorphic subgraph patterns in graph. 3-node, 4-node, 5-node graphlets are shown in the figure above. Firstly, we use random walk sampling technique to compute 5-node graphlet frequency in our project. For details, please refer to [Implementation](https://github.com/allhailjustice/vis_class_project/blob/master/graphlet.py) and [Algorithm](https://arxiv.org/pdf/1603.07504.pdf). Then we do logarithmic scaling on the frequency vector and use the scaled vector as input of nearest neighbour model.
 
 ### part 2: interface
 
