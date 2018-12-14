@@ -14,7 +14,7 @@ Please refer to interface.py for usage
 * This project combines visualization and machine learning. It works on predicting visualiztion performance on specific layouts for graph, using machine learning strategy. By doing this project, we may get further inspriation on how to apply machine learning approaches to visualization.
 
 ## Related Work
-* transactions on visualization and computer graphics, 24(1), 478-488. Kwon, O. H., Crnovrsanin, T., & Ma, K. L. (2018). What Would a Graph Look Like in This Layout? A Machine Learning Approach to Large Graph Visualization. IEEE
+* Oh-Hyun Kwon, Tarik Crnovrsanin, and Kwan-Liu Ma. What would a graph look like in this layout? a machine learning approach to large graph visualization. IEEE transactions on visualization and computer graphics, 24(1):478– 488, 2018. 
 * Xiaowei Chen, Yongkun Li, Pinghui Wang, and John Lui. A general framework for estimating graphlet statistics via random walk. Proceedings of the VLDB Endowment, 10(3):253–264, 2016.
 * Timothy A Davis and Yifan Hu. The university of florida sparse matrix collec- tion. ACM Transactions on Mathematical Software (TOMS), 38(1):1, 2011.
 * Peter Eades, Seok-Hee Hong, Karsten Klein, and An Nguyen. Shape-based quality metrics for large graph visualization. In International Symposium on Graph Drawing and Network Visualization, pages 502–514. Springer, 2015.
