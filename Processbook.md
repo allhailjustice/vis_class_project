@@ -4,7 +4,8 @@ Main files in this folder.
 * graphlet.py: calculate graphlet frequency by random walk
 * layout.py: draw the layout
 * knn.py: train a nearest neighbour model
-* interface.py: Show a interface for user interaction
+* interface.py: show a interface for user interaction
+* experiment_real_data.ipynb: the experiment process on real data
 
 Please refer to interface.py for usage
 
