@@ -4,7 +4,6 @@ Main files in this folder.
 * graphlet.py: calculate graphlet frequency by random walk
 * layout.py: draw the layout
 * knn.py: train a nearest neighbour model
-* test.py: Show how to use the files above
 * interface.py: Show a interface for user interaction
 
 Please refer to interface.py for usage
@@ -12,7 +11,6 @@ Please refer to interface.py for usage
 ## Overview and Motivation
 * Graph is often used to abstract data. In many research fields, the problem of data analysis can be transformed into graph analysis that focuses on the topological structure of graph. One of the important parts of this project is to measure the topological similarity between graphs, which is exact what we are interested in.
 * This project combines visualization and machine learning. It works on predicting visualiztion performance on specific layouts for graph, using machine learning strategy. By doing this project, we may get further inspriation on how to apply machine learning approaches to visualization.
-* So far, the ways we have learnt in class to evaluate visualization layouts are more like intuitive senses rather than numerical metrics. However, the latter one can lead to automatic evaluation process withou human inspection, which is very convenient for the cases have large amount of graphs. This project uses several aesthetic criteria and metrics to evaluate visualization performance which can be a supplement for the course.
 
 ## Related Work
 * transactions on visualization and computer graphics, 24(1), 478-488. Kwon, O. H., Crnovrsanin, T., & Ma, K. L. (2018). What Would a Graph Look Like in This Layout? A Machine Learning Approach to Large Graph Visualization. IEEE
@@ -20,13 +18,12 @@ Please refer to interface.py for usage
 * Timothy A Davis and Yifan Hu. The university of florida sparse matrix collec- tion. ACM Transactions on Mathematical Software (TOMS), 38(1):1, 2011.
 * Peter Eades, Seok-Hee Hong, Karsten Klein, and An Nguyen. Shape-based quality metrics for large graph visualization. In International Symposium on Graph Drawing and Network Visualization, pages 502–514. Springer, 2015.
 * Stefan Hachul and Michael Jünger. Large-graph layout algorithms at work: An experimental study. J. Graph Algorithms Appl., 11(2):345–369, 2007.
-* https://github.com/shiruipan/graph_datasets.
 
 ## Questions
-What questions are you trying to answer? How did these questions evolve over the course of the project? What new questions did you consider in the course of your analysis?
+In appearance, what we did is to predict the layout without computing it. However, the core question hiding behind is can we represent a layout by its corresponding topological features in the data. It can be further develop to another question which is can we depress the layout in its topological representation without lossing much information. Although our work is still in the appearance, it gives rise to some interesting thoughts for future researches.
 
 ## Data
-Source, scraping method, cleanup, etc.
+We have two data sources. One is randomly generated synthetic dataset. The other is [SuiteSparse Matrix Collection](https://sparse.tamu.edu/) (formerly the University of Florida Sparse Matrix Collection). We extracted the symmetric matrices from it with 100-500 vertices and then did binarization.
 
 ## Implementation
 
@@ -54,10 +51,10 @@ and two rows of plots(three plots of each):
 So users can compare estimated layout with real layout multiple times in three kinds of layout methods.
 
 ## Visualization Technique
-What were the difficulties in implementing the paper? What did you have to learn, above and beyond the paper, in order to implement it?
+We have to get a sense on what is the graphlet and why its frequency matters. The most difficult part in this project is to implement a effective random walk algorithm to compute graphlet frequency which is introduced in another paper.
 
 ## Evaluation
-What did you choose to evaluate the technique? Did you follow the experimental setup as described by the paper, or did you pursue a different form of evaluation?
+We can easily evaluate the technique by visualize experiment outcome. However, we don't have method to evaluate it by some quantitative metrics.
 
 ## Analysis
-What did you learn about the technique by applying it to the different datasets? How can you characterize the technique’s strengths and weaknesses in terms of the data?
+The outcome of experiment on synthetic data looks good, but on real data is not good. The resason is that we use synthetic data to train our model due to insufficiency of real data, and synthetic data do not have the complex artificial features like it in real data. We all know that machine learning methods heavily rely on the quality and quatity of data. This characteristic also appear in our project. So the strength of our technique is that it works if we have appropriate training data, and weakness is that we rely too much on the training data.
